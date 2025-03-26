@@ -1,8 +1,0 @@
-prefix=/home/rancho/1hmy/k_cbs_swarmrviz/install
-
-Name: reading_pcd
-Description: Description of reading_pcd
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp rospy sensor_msgs geometry_msgs

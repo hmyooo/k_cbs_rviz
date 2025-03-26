@@ -1,8 +1,0 @@
-prefix=/home/rancho/1hmy/k_cbs_swarmrviz/devel
-
-Name: path_search
-Description: Description of path_search
-Version: 0.0.1
-Cflags: -I/home/rancho/1hmy/k_cbs_swarmrviz/src/src/src/src/plan_path/include
-Libs: -L${prefix}/lib 
-Requires: 

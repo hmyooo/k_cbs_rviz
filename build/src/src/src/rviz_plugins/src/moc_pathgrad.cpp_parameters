@@ -1,7 +1,0 @@
--DROS_BUILD_SHARED_LIBS=1
--DROS_BUILD_SHARED_LIBS=1
--DROS_PACKAGE_NAME="rviz_plugins"
--DROSCONSOLE_BACKEND_LOG4CXX
--o
-/home/rancho/1hmy/k_cbs_swarmrviz/build/src/src/src/rviz_plugins/src/moc_pathgrad.cpp
-/home/rancho/1hmy/k_cbs_swarmrviz/src/src/src/src/rviz_plugins/src/pathgrad.h
