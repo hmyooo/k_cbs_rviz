@@ -1,0 +1,27 @@
+<launch>
+
+  <!-- <arg name="map_size_x" default="100.0"/>
+  <arg name="map_size_y" default="100.0"/>
+   -->
+
+  <arg name="avoid_yaml" default="/home/rancho/triplez/datadeal/path_show/src/avoid.yaml"/>
+  <arg name="recover_yaml" default="/home/rancho/triplez/datadeal/path_show/src/recover.yaml"/>
+  <arg name="inputFile" default="/home/rancho/triplez/datadeal/path_show/src/initial.yaml"/>
+  <arg name="candidate_yaml" default="/home/rancho/triplez/datadeal/path_show/src/candidate.yaml"/>
+  <arg name="pcd_file" default="/pcd/hard2.pcd"/>
+  <node pkg="reading_pcd" type="pcd_read" name="random_complex" output="screen">
+    <param name="file_name" value="$(arg pcd_file)"/>
+  </node>
+  <node pkg="path_search" type="candidate_node" name="candidate_node" output="screen">
+   <param name="avoid_yaml" value="$(arg avoid_yaml)"/>
+   <param name="recover_yaml" value="$(arg recover_yaml)"/>
+   <param name="inputFile" value="$(arg inputFile)"/>
+   <param name="candidate_yaml" value="$(arg candidate_yaml)"/>
+   <param name="showspin" value="0.1"/>
+   
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find path_search)/launch/rviz_config/candidate.rviz"/> 
+
+
+
+</launch>

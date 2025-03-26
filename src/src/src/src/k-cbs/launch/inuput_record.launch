@@ -1,0 +1,22 @@
+<launch>
+
+  <!-- <arg name="mapfile" default="/home/houmingyu/kinematic-cbs/src/reading_pcd/pcd/middle0.5@0.5x.png"/> -->
+
+  <arg name="mapfile" default="/home/rancho/1hmy/kinematic-cbs/src/reading_pcd/pcd/reference_extrect_structure_small0.5mirror.png"/>
+
+  <!-- <arg name="map_size_y" default="100.0"/> -->
+  
+  
+  <node pkg="reading_pcd" name="reading_pcd" type="pcdread.py" output="screen">
+    <param name="mapfile" value= "$(arg mapfile)" />
+  </node>
+  <node pkg="k_cbs" type="inputwrite.py" name="cbs_node" output="screen">
+    <param name="outputfile" value= "/home/rancho/0Triplez/experiment/k-cbs/input/input0.yaml" />
+    <param name="agent_num" type = "int" value = "1" />
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find k_cbs)/launch/rviz/k_run.rviz" /> 
+
+
+
+
+</launch>

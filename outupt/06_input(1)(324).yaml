@@ -1,0 +1,64 @@
+agents:
+- start: [6.67243 , 16.1545 , -4.74686]
+  index: 0
+  model:
+    type: Ackerman
+    lf: 1.68
+    lb: 1.68
+    width: 1.75
+    delta: 0.11781
+  goal: [8.18398 , 3.86968 , 1.5708]
+- start: [6.89229 , 3.15513 , -1.51134]
+  index: 1
+  model:
+    type: Ackerman
+    lf: 1.68
+    lb: 1.68
+    width: 1.75
+    delta: 0.11781
+  goal: [3.98666 , 11.4688 , 3.03562]
+- start: [1.26259 , 10.9363 , -6.17325]
+  index: 2
+  model:
+    type: Ackerman
+    lf: 1.68
+    lb: 1.68
+    width: 1.75
+    delta: 0.11781
+  goal: [12.3795 , 10.1728 , 6.27964]
+- start: [8.68646 , 10.8426 , -4.86738]
+  index: 3
+  model:
+    type: Ackerman
+    lf: 1.68
+    lb: 1.68
+    width: 1.75
+    delta: 0.11781
+  goal: [11.6685 , 4.3313 , 0.0996612]
+- start: [11.86 , 4.30395 , -3.2129]
+  index: 4
+  model:
+    type: Ackerman
+    lf: 1.68
+    lb: 1.68
+    width: 1.75
+    delta: 0.11781
+  goal: [5.25522 , 6.21862 , 3.38658]
+- start: [5.11801 , 6.10886 , -0.606989]
+  index: 5
+  model:
+    type: Ackerman
+    lf: 1.68
+    lb: 1.68
+    width: 1.75
+    delta: 0.11781
+  goal: [13.1733 , 9.99452 , 0.0930326]
+- start: [5.61196 , 11.4051 , -4.71239]
+  index: 6
+  model:
+    type: Ackerman
+    lf: 1.68
+    lb: 1.68
+    width: 1.75
+    delta: 0.11781
+  goal: [6.29801 , 4.73676 , 1.46406]

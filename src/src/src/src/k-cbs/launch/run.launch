@@ -1,0 +1,4 @@
+ <launch>
+    <include file="$(find k_cbs)/launch/k_cbs.launch"/>
+    <include file="$(find k_cbs)/launch/decent.launch"/>
+ </launch> 

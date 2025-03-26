@@ -1,0 +1,25 @@
+<launch>
+
+  <!-- <arg name="mapfile" default="/home/houmingyu/kinematic-cbs/src/reading_pcd/pcd/middle0.5@0.5x.png"/> -->
+
+  <arg name="mapfile" default="/home/rancho/1hmy/kinematic-cbs/src/reading_pcd/pcd/reference_extrect_structure_small0.5mirror.png"/>
+
+
+
+  
+  
+  <node pkg="reading_pcd" name="reading_pcd" type="pcdread.py" output="screen">
+    <param name="mapfile" value= "$(arg mapfile)" />
+  </node>
+  <node pkg="k_cbs" type="show_node" name="show_node" output="screen">
+    <param name="map_file" value= "$(arg mapfile)" />
+    <param name="input_yaml" type = "string" value = "/home/rancho/0Triplez/experiment/k-cbs/output/output0.yaml" />
+    <param name="showspin" type = "double" value = "0.2" />
+    
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find k_cbs)/launch/rviz/k_run.rviz" /> 
+
+
+
+
+</launch>

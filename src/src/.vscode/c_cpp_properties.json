@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/rancho/1hmy/kinematic-cbs/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/rancho/1hmy/kinematic-cbs/src/src/src/bspline_opt/include/**",
+        "/home/rancho/1hmy/kinematic-cbs/src/src/src/dy_avoidobs/include/**",
+        "/home/rancho/1hmy/kinematic-cbs/src/src/src/k-cbs/include/**",
+        "/home/rancho/1hmy/kinematic-cbs/src/src/src/plan_path/include/**",
+        "/home/rancho/1hmy/kinematic-cbs/src/src/src/path_searching/include/**",
+        "/home/rancho/1hmy/kinematic-cbs/src/src/src/plan_env/include/**",
+        "/home/rancho/1hmy/kinematic-cbs/src/src/src/traj_utils/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

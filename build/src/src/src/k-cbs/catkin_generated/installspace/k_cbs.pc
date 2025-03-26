@@ -1,0 +1,8 @@
+prefix=/home/rancho/1hmy/k_cbs_swarmrviz/install
+
+Name: k_cbs
+Description: Description of k_cbs
+Version: 0.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lk_cbs
+Requires: 

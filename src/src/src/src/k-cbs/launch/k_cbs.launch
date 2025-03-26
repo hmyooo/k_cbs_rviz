@@ -1,0 +1,61 @@
+<launch>
+
+  <!-- <arg name="mapfile" default="/home/rancho/1hmy/kinematic-cbs/src/reading_pcd/pcd/middle0.5@0.5x.png"/> -->
+  <!-- <arg name="mapfile" default="/home/rancho/1hmy/kinematic-cbs/src/reading_pcd/pcd/reference_extrect_structure_small0.5mirror.png"/> -->
+  <arg name="mapfile" default="  /home/rancho/1hmy/Car-like-Robotic-swarm/newmap/06(1)(1)_.png"/>
+  <!-- <arg name="mapfile" default="/home/rancho/1hmy/test_ws_gazebo_1/test_ws/src/pgm_map_creator/maps/datingok_gai_deal_merge.png"/> -->
+  <!-- <arg name="mapfile" default="/home/rancho/1hmy/test_ws_gazebo_1/test_ws/src/pgm_map_creator/maps/word1_0_mirror.png"/> -->
+
+  <!-- <arg name="mapfile" default="  /home/rancho/1hmy/Car-like-Robotic-swarm/newmap/00(1)(1).jpg"/> -->
+  
+  <!-- <arg name="mapfile" default="/home/rancho/1hmy/map/picturemap/0222.png"/> -->
+
+
+
+  
+  
+  <node pkg="reading_pcd" name="reading_pcd" type="pcdread.py" output="screen">
+    <param name="mapfile" value= "$(arg mapfile)" />
+  </node>
+
+  <!-- <node pkg="dy_avoidobs" type="dy_avoidobs_node" name="dy_avoidobs_node" output="screen"> -->
+    <!-- <param name="file_directory" value= "/home/houmingyu/trac/pointcloudmap/" />
+    <param name="file_name_back" value= "0.3s_ceng_6.3s_05smaller3beiZallback(1)" />0
+    <param name="file_name_trac" value= "0.3s_ceng_3min_05smaller3beiZalltrac(1)" /> -->
+
+    <!-- <param name="agent_num" type = "int" value = "2" /> -->
+
+  <!-- </node> -->
+
+  <node pkg="k_cbs" type="cbs_node" name="cbs_node" output="screen">
+    <param name="map_file" value= "$(arg mapfile)" />
+    <param name="manual_mode" type = "bool" value = "true" />
+    <param name="out_mode" type = "bool" value = "true" />
+    <param name="agent_num" type = "int" value = "7" />
+    <param name="batchSize" type = "int" value = "50" />
+
+    <param name="mapresolution" type = "double" value = "1.0" />
+    <param name="origin_x" type = "double" value = "0.0" />
+    <param name="origin_y" type = "double" value = "0.0" />
+
+    <param name="input_yaml" type = "string" value = "/home/rancho/1hmy/k_cbs_swarmrviz/outupt/06(1)(324)input.yaml" />
+    <param name="output_yaml" type = "string" value = "/home/rancho/1hmy/k_cbs_swarmrviz/outupt/06(1)(324)o.yaml" />
+    <param name="output_yaml_1" type = "string" value = "/home/rancho/1hmy/k_cbs_swarmrviz/outupt/06_input(1)(324).yaml" />
+    <param name="outputfile_corid" type = "string" value = "/home/rancho/1hmy/k_cbs_swarmrviz/outupt/06_corrid(1)(324).yaml" />
+
+    <!-- <param name="output_yaml_2" type = "string" value = "/home/houmingyu/trac/pointcloudmap/0.3s_ceng_3min_05smallerweisamllZalltrac.pcd" /> -->
+    <!-- <param name="output_yaml" type = "string" value = "/home/houmingyu/kinematic-cbs/output/path/path" /> -->
+
+
+    <param name="file_directory" value= "/home/rancho/1hmy/kinematic-cbs/map/" />
+    <param name="file_name_back" value= "0.3s_ceng_6s_05smaller3beiZallback" />
+    <param name="file_name_trac" value= "0.3s_ceng_3min_05smaller3beiZalltrac" />
+    <param name="showspin" type = "double" value = "0.2" />
+    
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find k_cbs)/launch/rviz/kkk_run.rviz" /> 
+
+
+
+
+</launch>

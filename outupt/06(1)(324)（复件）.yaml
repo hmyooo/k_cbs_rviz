@@ -1,0 +1,85 @@
+statistics:
+Total_Plan_Time: 241.102ms
+  Total Expand high-level nodes: -1
+  Average Low-level-search time: 40.1837
+  
+  Elapsed time = 66.22 sec. (18848.24 ticks, tree = 0.02 MB, solutions = 19)
+   7235    72   -72034.5829    79   -72021.0832   -72059.1163   216613    0.05%
+   7621   175   -72026.9056    40   -72021.0832   -72059.1163   224128    0.05%
+*  7979   291      integral     0   -72022.4624   -72059.1163   225938    0.05%
+*  8001   366      integral     0   -72024.1069   -72059.1163   226599    0.05%
+*  8200   426      integral     0   -72044.4463   -72059.1163   228183    0.02%
+*  8424   225      integral     0   -72052.2295   -72059.1163   229450    0.01%
+
+Cover cuts applied:  7
+Implied bound cuts applied:  165
+Flow cuts applied:  124
+Mixed integer rounding cuts applied:  734
+Lift and project cuts applied:  2
+Gomory fractional cuts applied:  101
+
+Root node processing (before b&c):
+  Real time             =    4.32 sec. (5515.11 ticks)
+Parallel b&c, 20 threads:
+  Real time             =   82.61 sec. (16557.00 ticks)
+  Sync time (average)   =   17.97 sec.
+  Wait time (average)   =    0.02 sec.
+                          ------------
+Total (root+branch&cut) =   86.93 sec. (22072.10 ticks)
+object -72052.2
+statistics:
+Total_Plan_Time: 280.052ms
+  Total Expand high-level nodes: -1
+  Average Low-level-search time: 46.6754
+      627    51   -73214.2796    11   -73208.9802   -73272.6500    30822    0.09%
+*   630    69      integral     0   -73214.2796   -73272.6500    29600    0.08%
+
+Cover cuts applied:  13
+Implied bound cuts applied:  167
+Flow cuts applied:  82
+Mixed integer rounding cuts applied:  544
+Lift and project cuts applied:  10
+Gomory fractional cuts applied:  74
+
+Root node processing (before b&c):
+  Real time             =    4.02 sec. (4956.63 ticks)
+Parallel b&c, 20 threads:
+  Real time             =    8.31 sec. (1503.99 ticks)
+  Sync time (average)   =    2.83 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   12.34 sec. (6460.62 ticks)
+object -73214.3
+
+statistics:
+Total_Plan_Time: 132.828ms
+  Total Expand high-level nodes: -1
+  Average Low-level-search time: 22.1381
+  *   427+  160                       -82575.2411   -82616.5888             0.05%
+    441   130   -82576.2224   119   -82575.2411   -82616.5888    41138    0.05%
+*   534+  110                       -82579.4652   -82616.5888             0.04%
+    568    89   -82585.0584    51   -82579.4652   -82616.5888    47470    0.04%
+*   592    91      integral     0   -82579.4656   -82616.5888    47413    0.04%
+    646    96   -82589.8340    49   -82579.4656   -82613.1306    51238    0.04%
+*   649+   88                       -82579.9663   -82613.1306             0.04%
+    706    97   -82584.0619    34   -82579.9663   -82613.1306    52278    0.04%
+
+Clique cuts applied:  7
+Cover cuts applied:  9
+Implied bound cuts applied:  221
+Flow cuts applied:  132
+Mixed integer rounding cuts applied:  1451
+Lift and project cuts applied:  13
+Gomory fractional cuts applied:  110
+
+Root node processing (before b&c):
+  Real time             =    5.81 sec. (6682.79 ticks)
+Parallel b&c, 20 threads:
+  Real time             =   12.45 sec. (2529.01 ticks)
+  Sync time (average)   =    4.20 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   18.26 sec. (9211.80 ticks)
+object -82580
+
+

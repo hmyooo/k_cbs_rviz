@@ -1,0 +1,2 @@
+src/src/src/bspline_opt:src/src/src/dy_avoidobs:src/src/src/k-cbs:src/src/src/path_searching:src/src/src/plan_env:src/src/src/plan_path:src/src/src/reading_pcd:src/src/src/rviz_plugins:src/src/src/traj_utils
+-DCATKIN_DEVEL_PREFIX=/home/rancho/1hmy/k_cbs_swarmrviz/devel -DCMAKE_INSTALL_PREFIX=/home/rancho/1hmy/k_cbs_swarmrviz/install -G Unix Makefiles

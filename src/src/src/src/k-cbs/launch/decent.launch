@@ -1,0 +1,38 @@
+<launch>
+
+  <arg name="car_num" default="4"/>
+  <!-- <arg name="mapfile" default="/home/rancho/1hmy/kinematic-cbs/src/reading_pcd/pcd/reference_extrect_structure_small0.5mirror.png"/> -->
+  <arg name="mapfile" default="  /home/rancho/1hmy/Car-like-Robotic-swarm/newmap/02(1).png"/>
+
+
+
+    <include file="$(find k_cbs)/launch/run_in_sim.launch">
+        <arg name="car_id" value="0"/>
+        <arg name="car_num" value="$(arg car_num)"/>
+
+    </include>
+
+    <include file="$(find k_cbs)/launch/run_in_sim.launch">
+        <arg name="car_id" value="1"/>
+        <arg name="car_num" value="$(arg car_num)"/>
+
+    </include>
+
+    <include file="$(find k_cbs)/launch/run_in_sim.launch">
+        <arg name="car_id" value="2"/>
+        <arg name="car_num" value="$(arg car_num)"/>
+
+    </include>
+
+    <include file="$(find k_cbs)/launch/run_in_sim.launch">
+        <arg name="car_id" value="3"/>
+        <arg name="car_num" value="$(arg car_num)"/>
+
+    </include>
+     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find k_cbs)/launch/rviz/k_swarm.rviz" /> 
+    
+    <node pkg="reading_pcd" name="reading_pcd" type="pcdread.py" output="screen">
+    <param name="mapfile" value= "$(arg mapfile)" />
+  </node>
+
+</launch>

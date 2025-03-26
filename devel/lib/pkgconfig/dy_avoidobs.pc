@@ -1,0 +1,8 @@
+prefix=/home/rancho/1hmy/k_cbs_swarmrviz/devel
+
+Name: dy_avoidobs
+Description: Description of dy_avoidobs
+Version: 0.0.0
+Cflags: -I/home/rancho/1hmy/k_cbs_swarmrviz/devel/include -I/home/rancho/1hmy/k_cbs_swarmrviz/src/src/src/src/dy_avoidobs/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

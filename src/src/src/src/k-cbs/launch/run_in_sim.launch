@@ -1,0 +1,103 @@
+<launch>
+  <!-- size of map, change the size inflate x, y, z according to your application -->
+ 
+  <arg name="car_id"/>
+  <arg name="car_num"/>
+
+
+  <!-- main algorithm params -->
+
+
+  <!-- trajectory server -->
+  <node pkg="dy_avoidobs" name="car_$(arg car_id)_decenplan" type="decenplan_node" output="screen" launch-prefix="xterm -e gdb -ex run --args">
+    <!-- <remap from="position_cmd" to="drone_$(arg drone_id)_planning/pos_cmd"/>
+    <remap from="~planning/bspline" to="drone_$(arg drone_id)_planning/bspline"/> -->
+    <param name="car_id" value= "$(arg car_id)" />
+    <param name="car_num" value="$(arg car_num)"/>
+
+
+    <!-- <param name="trac_yaml" type = "string" value = "/home/rancho/1hmy/kinematic-cbs/input/trac.yaml" /> -->
+    <param name="fsm/path_yaml" type = "string" value = "/home/rancho/1hmy/kinematic-cbs/output/path/output0_1.yaml" />
+
+    <param name="optimization/mappng" type = "string" value = "/home/rancho/1hmy/kinematic-cbs/src/reading_pcd/pcd/reference_extrect_structure_small0.5.png" />
+    <!-- <param name="optimization/mappng" type = "string" value = "/home/rancho/1hmy/kinematic-cbs/src/reading_pcd/pcd/reference_extrect_structure_small0.5mirror.png" /> -->
+
+    
+    <!-- <param name="optimization/lambda_smooth" value="1.0" type="double"/>
+    <param name="optimization/lambda_collision" value="0.5" type="double"/>
+    <param name="optimization/lambda_feasibility" value="0.1" type="double"/>
+    <param name="optimization/lambda_fitness" value="1.0" type="double"/> -->
+    <!-- ok  -->
+    <!-- <param name="optimization/lambda_smooth" value="1.0" type="double"/>
+    <param name="optimization/lambda_collision" value="50" type="double"/>
+    <param name="optimization/lambda_feasibility" value="0.00001" type="double"/>
+    <param name="optimization/lambda_fitness" value="1.0" type="double"/>
+    <param name="optimization/lambda_Distancestatic" value="0.0001" type="double"/>
+    <param name="optimization/lambda_gloabl" value="10.0" type="double"/>
+    <param name="optimization/lambda_f_dyobs" value="1.0" type="double"/> -->
+
+    <param name="optimization/lambda_smooth" value="1.0" type="double"/>
+    <param name="optimization/lambda_collision" value="1000" type="double"/>
+    <param name="optimization/lambda_feasibility" value="0.005" type="double"/>
+    <param name="optimization/lambda_fitness" value="1.0" type="double"/>
+    <param name="optimization/lambda_Distancestatic" value="0.0001" type="double"/>
+    <param name="optimization/lambda_gloabl" value="1.0" type="double"/>
+    <param name="optimization/lambda_f_dyobs" value="10000.0" type="double"/>
+
+
+    <param name="optimization/dist0" value="0.5" type="double"/>
+    <param name="optimization/swarm_clearance" value="2.0" type="double"/>
+    <param name="optimization/max_vel" value="3" type="double"/>
+    <param name="optimization/max_acc" value="2" type="double"/>
+    <param name="optimization/maprelolution" value="1" type="double"/>
+
+    <param name="fsm/emergency_time" value="1.0" type="double"/>
+    <param name="fsm/thresh_replan_time" value="1.0" type="double"/>
+    <param name="fsm/thresh_no_replan_meter" value="1.0" type="double"/>
+    <!-- <param name="fsm/globalpath" type = "string" value = "/home/rancho/1hmy/kinematic-cbs/output/output0.yaml" /> -->
+
+    <param name="fsm/file_directory" value= "/home/rancho/1hmy/kinematic-cbs/map/" />
+    <param name="fsm/file_name_back" value= "0.3s_ceng_all_05smallerwei3Z6s_back_weitianchong" />
+    <param name="fsm/file_name_trac" value= "0.3s_ceng_3min_05smaller3beiZalltrac" />
+
+    <param name="manager/max_vel" value="3.0" type="double"/>
+    <param name="manager/max_vel_yaw" value="35.0" type="double"/>
+  
+    <param name="manager/max_acc" value="2.0" type="double"/>
+    <param name="manager/max_jerk" value="4.0" type="double"/>
+    <param name="manager/control_points_distance" value="0.5" type="double"/>
+    <param name="manager/feasibility_tolerance" value="0.05" type="double"/>
+    <param name="manager/planning_horizon" value="15" type="double"/>
+    <param name="manager/use_distinctive_trajs" value="true" type="bool"/>
+    <param name="manager/drone_id" value="$(arg car_id)"/>
+    <param name="manager/trac_yaml" type = "string" value = "/home/rancho/1hmy/kinematic-cbs/input/trac.yaml" />
+
+    <!-- <param name="traj_server/time_forward" value="1.0" type="double"/> -->
+  </node>
+
+  <!--node pkg="waypoint_generator" name="waypoint_generator" type="waypoint_generator" output="screen">
+    <remap from="~odom" to="$(arg odom_topic)"/>        
+    <remap from="~goal" to="/move_base_simple/goal"/>
+    <remap from="~traj_start_trigger" to="/traj_start_trigger" />
+    <param name="waypoint_type" value="manual-lonely-waypoint"/>    
+  </node-->
+
+  <!-- use simulator -->
+  <!-- <include file="$(find k_cbs)/launch/simulator.xml">
+
+    <arg name="drone_id" value="$(arg drone_id)"/>
+
+    <arg name="map_size_x_" value="$(arg map_size_x)"/>
+    <arg name="map_size_y_" value="$(arg map_size_y)"/>
+    <arg name="map_size_z_" value="$(arg map_size_z)"/>
+
+    <arg name="init_x_" value="$(arg init_x)"/>
+    <arg name="init_y_" value="$(arg init_y)"/>
+    <arg name="init_z_" value="$(arg init_z)"/>
+
+    <arg name="odometry_topic" value="$(arg odom_topic)" />
+  </include> -->
+
+
+
+</launch>

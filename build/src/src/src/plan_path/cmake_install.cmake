@@ -1,0 +1,54 @@
+# Install script for directory: /home/rancho/1hmy/k_cbs_swarmrviz/src/src/src/src/plan_path
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/home/rancho/1hmy/k_cbs_swarmrviz/install")
+endif()
+string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+
+# Set the install configuration name.
+if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  if(BUILD_TYPE)
+    string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+           CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
+  else()
+    set(CMAKE_INSTALL_CONFIG_NAME "")
+  endif()
+  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+endif()
+
+# Set the component getting installed.
+if(NOT CMAKE_INSTALL_COMPONENT)
+  if(COMPONENT)
+    message(STATUS "Install component: \"${COMPONENT}\"")
+    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
+  else()
+    set(CMAKE_INSTALL_COMPONENT)
+  endif()
+endif()
+
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+endif()
+
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rancho/1hmy/k_cbs_swarmrviz/build/src/src/src/plan_path/catkin_generated/installspace/path_search.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_search/cmake" TYPE FILE FILES
+    "/home/rancho/1hmy/k_cbs_swarmrviz/build/src/src/src/plan_path/catkin_generated/installspace/path_searchConfig.cmake"
+    "/home/rancho/1hmy/k_cbs_swarmrviz/build/src/src/src/plan_path/catkin_generated/installspace/path_searchConfig-version.cmake"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_search" TYPE FILE FILES "/home/rancho/1hmy/k_cbs_swarmrviz/src/src/src/src/plan_path/package.xml")
+endif()
+

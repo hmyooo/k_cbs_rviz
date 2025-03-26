@@ -1,0 +1,48 @@
+map: /home/triplez/experiment/kinematic-cbs/src/input/map.png
+obs :
+ - [21.95 ,13.85 ,2, 5]
+agents:
+- start: [524.926, 60.9215, 5.75959]
+  goal: 
+    - [273.805, 177.882, 1.0472]
+  index: 0
+  model:
+    type: Ackerman
+    lf: 2
+    lb: 0.65
+    width: 1.75
+    r: 6
+    delta: 0.11781
+# - start: [180.055, 45.8714, 0]
+#   goal: 
+#     - [114.274, 185.192, 1.5708]
+#   index: 1
+#   model:
+#     type: Ackerman
+#     lf: 2
+#     lb: 0.65
+#     width: 1.75
+#     r: 6
+#     delta: 0.11781
+# - start: [434.196, 290.543, 3.14159]
+#   goal: 
+#     - [275.955, 337.843, 4.71239]
+#   index: 2
+#   model:
+#     type: Ackerman
+#     lf: 2
+#     lb: 0.65
+#     width: 1.75
+#     r: 6
+#     delta: 0.11781  
+# - start: [22.55, 16.8, -0]
+#   goal: 
+#     - [50.25, 22.2, -0]
+#   index: 3
+  # model:
+  #   type: Ackerman
+  #   lf: 2
+  #   lb: 0.65
+  #   width: 1.75
+  #   r: 6
+  #   delta: 0.11781
